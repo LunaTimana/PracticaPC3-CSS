@@ -338,11 +338,20 @@
 // =========================================================================
 // Solución Ejercicio 10: Barra de herramientas fija con fallback
 // ========================================================================
-.subnav-toolbar {
+subnav-toolbar {
+  // Estado predeterminado (Fallback para navegadores sin soporte sticky)
   position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 16px;
 
+  // Progressive Enhancement: sólo si el navegador valida la propiedad
   @supports (position: sticky) or (position: -webkit-sticky) {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
   }
 }
