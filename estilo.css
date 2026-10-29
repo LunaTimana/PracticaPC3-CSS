@@ -153,12 +153,18 @@
   animation: spinLoader 1s linear infinite;
 }
 
-.subnav-toolbar {
+subnav-toolbar {
   position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 16px;
 }
 @supports (position: sticky) or (position: -webkit-sticky) {
-  .subnav-toolbar {
+  subnav-toolbar {
     position: sticky;
     top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
   }
 }/*# sourceMappingURL=estilo.css.map */
